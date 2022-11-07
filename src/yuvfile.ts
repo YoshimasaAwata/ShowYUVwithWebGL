@@ -51,4 +51,8 @@ export class YUVFile {
         this._v = await this.readFile(YUVFile.UV_SIZE);
         this._available = (this._v != undefined);
     }
+
+    public rewind() {
+        this.start = 0;
+    }
 }
