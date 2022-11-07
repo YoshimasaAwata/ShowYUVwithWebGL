@@ -32,9 +32,9 @@ export class YUVFile {
     }
 
     protected async readFile(size: number): Promise<Uint8Array | undefined> {
-        var array: Uint8Array | undefined;
+        let array: Uint8Array | undefined;
         if (this.file != undefined) {
-            var end: number = this.start + size;
+            const end: number = this.start + size;
             const arraybuffer: Promise<ArrayBuffer> = this.file.slice(this.start, end, this.file.type).arrayBuffer();
             array = new Uint8Array(await arraybuffer);
             if (array.byteLength != size) {

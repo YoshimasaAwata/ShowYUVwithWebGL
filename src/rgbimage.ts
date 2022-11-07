@@ -21,12 +21,12 @@ export class RGBImage extends YUVFile {
     protected transYUV2RGB(): Uint8ClampedArray {
         const rgba = new Uint8ClampedArray(YUVFile.CIF_WIDTH * YUVFile.CIF_HEIGHT * 4);
         if ((this.y != undefined) && (this.u != undefined) && (this.v != undefined)) {
-            var i: number = 0;
-            for (var h: number = 0; h < YUVFile.CIF_HEIGHT; h++) {
+            let i: number = 0;
+            for (let h: number = 0; h < YUVFile.CIF_HEIGHT; h++) {
                 const y_pos: number = h * YUVFile.CIF_WIDTH;
                 const uv_pos: number = Math.floor(h / 2) * (YUVFile.CIF_WIDTH / 2);
 
-                for (var w: number = 0; w < YUVFile.CIF_WIDTH; w++) {
+                for (let w: number = 0; w < YUVFile.CIF_WIDTH; w++) {
                     const yi: number = this.y[y_pos + w];
                     const ui: number = this.u[uv_pos + Math.floor(w / 2)];
                     const vi: number = this.v[uv_pos + Math.floor(w / 2)];
@@ -54,7 +54,7 @@ export class RGBImage extends YUVFile {
         if (this.available) {
             const rgba: Uint8ClampedArray = this.transYUV2RGB();
             const image = new ImageData(rgba, YUVFile.CIF_WIDTH);
-            this.bitmap = await createImageBitmap(image);
+            this.bitmap = await window.createImageBitmap(image);
         } else {
             this.bitmap = undefined;
         }
