@@ -4,7 +4,7 @@ import { RGBImage } from "./rgbimage";
 
 export class Events4Elements2D extends Events4Elements {
     static readonly MAP_2D = new Map<Element, string>([
-        ['canvas', 'canvasYUV'],
+        ['canvas', 'canvas2D'],
         ['filebtn', 'btnOpenFile'],
         ['playbtn', 'btnPlay'],
         ['filetxt', 'txtFileName'],
