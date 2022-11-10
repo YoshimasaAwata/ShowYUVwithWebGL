@@ -31,6 +31,23 @@
     <!-- ファイルオープンダイアログのためのボタン(見えない) -->
     <input type="file" name="file-open" id="fileOpenDialog" accept=".yuv" hidden>
 
+    <hr>
+
+    <h2>&ltcanvas&gtにWebGLでYUV⇒RGB変換後の画像を表示(RGB)</h2>
+    <div class="d-flex bd-highlight mb-3 mt-5 justify-content-center">
+      <canvas id="canvasGLRGB" width="352" height="288">
+                CIFサイズのYUV画像を表示します。
+              </canvas>
+    </div>
+    <div class="d-flex bd-highlight mb-3 justify-content-center">
+      <button type="button" class="btn btn-primary mx-2" disabled id="btnPlayGLRGB">Play</button>
+      <button type="button" class="btn btn-primary mx-1" id="btnOpenFileGLRGB">File...</button>
+      <input type="text" id="txtFileNameGLRGB" readonly>
+    </div>
+
+    <!-- ファイルオープンダイアログのためのボタン(見えない) -->
+    <input type="file" name="file-open" id="fileOpenDialogGLRGB" accept=".yuv" hidden>
+
   </main>
 
   <!-- Bootstrap JavaScript Libraries -->
