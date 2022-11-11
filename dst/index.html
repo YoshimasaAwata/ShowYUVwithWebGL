@@ -48,6 +48,23 @@
     <!-- ファイルオープンダイアログのためのボタン(見えない) -->
     <input type="file" name="file-open" id="fileOpenDialogGLRGB" accept=".yuv" hidden>
 
+    <hr>
+
+    <h2>&ltcanvas&gtにWebGLでYUVを直接GPUにセットして画像を表示(YUV)</h2>
+    <div class="d-flex bd-highlight mb-3 mt-5 justify-content-center">
+      <canvas id="canvasGLYUV" width="352" height="288">
+                    CIFサイズのYUV画像を表示します。
+                  </canvas>
+    </div>
+    <div class="d-flex bd-highlight mb-3 justify-content-center">
+      <button type="button" class="btn btn-primary mx-2" disabled id="btnPlayGLYUV">Play</button>
+      <button type="button" class="btn btn-primary mx-1" id="btnOpenFileGLYUV">File...</button>
+      <input type="text" id="txtFileNameGLYUV" readonly>
+    </div>
+
+    <!-- ファイルオープンダイアログのためのボタン(見えない) -->
+    <input type="file" name="file-open" id="fileOpenDialogGLYUV" accept=".yuv" hidden>
+
   </main>
 
   <!-- Bootstrap JavaScript Libraries -->
