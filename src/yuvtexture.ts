@@ -9,9 +9,9 @@ export class YUVTexture extends YUVFile {
 
     constructor(file: File, gl: WebGL2RenderingContext) {
         super(file);
-        this.textureY = this.createTexture(gl);
-        this.textureU = this.createTexture(gl);
-        this.textureV = this.createTexture(gl);
+        this.textureY = this.createYUVTexture(gl);
+        this.textureU = this.createYUVTexture(gl);
+        this.textureV = this.createYUVTexture(gl);
     }
 
     public finalize(gl: WebGL2RenderingContext) {
@@ -23,7 +23,7 @@ export class YUVTexture extends YUVFile {
         this.textureY = null;
     }
 
-    protected createTexture(gl: WebGL2RenderingContext): WebGLTexture | null {
+    protected createYUVTexture(gl: WebGL2RenderingContext): WebGLTexture | null {
         const texture: WebGLTexture | null = gl.createTexture();
         gl.bindTexture(gl.TEXTURE_2D, texture);
         gl.pixelStorei(gl.UNPACK_ALIGNMENT, 1);
