@@ -16,3 +16,4 @@ tagは以下の章に対応しています。
 - empty: index.htmlへの各要素の配置
 - show-rgb-with-canvas2d: コンパイルと実行
 - show-rgb-with-canvasgl: Canvas WebGL Contextによる描画(RGBテクスチャ)の実行
+- show-yuv-with-canvasgl: Canvas WebGL Contextによる描画(YUVテクスチャ)の実行

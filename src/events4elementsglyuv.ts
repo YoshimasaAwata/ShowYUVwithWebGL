@@ -3,7 +3,7 @@ import { Events4ElementsGL } from "./events4elementsgl";
 import { YUVColorSpace, YUVTexture } from "./yuvtexture";
 
 export class Events4ElementsGLYUV extends Events4ElementsGL {
-    static readonly MAP_GLRGB = new Map<Element, string>([
+    static readonly MAP_GLYUV = new Map<Element, string>([
         ['canvas', 'canvasGLYUV'],
         ['filebtn', 'btnOpenFileGLYUV'],
         ['playbtn', 'btnPlayGLYUV'],
@@ -52,7 +52,7 @@ export class Events4ElementsGLYUV extends Events4ElementsGL {
     private texImage: YUVTexture | undefined;
 
     constructor() {
-        super(Events4ElementsGLYUV.MAP_GLRGB);
+        super(Events4ElementsGLYUV.MAP_GLYUV);
     }
 
     public finalize() {
