@@ -16,7 +16,7 @@
 <body>
   <main>
     <h1>CIFサイズのYUV画像を表示</h1>
-    <h2>&ltcanvas&gtにYUV⇒RGB変換後の画像を表示</h2>
+    <h2 id="2d">&ltcanvas&gtにYUV⇒RGB変換後の画像を表示</h2>
     <div class="d-flex bd-highlight mb-3 mt-5 justify-content-center">
       <canvas class="border border-primary" id="canvas2D" width="352" height="288">
         CIFサイズのYUV画像を表示します。
@@ -33,7 +33,7 @@
 
     <hr>
 
-    <h2>&ltcanvas&gtにWebGLでYUV⇒RGB変換後の画像を表示(RGB)</h2>
+    <h2 id="webgl-rgb">&ltcanvas&gtにWebGLでYUV⇒RGB変換後の画像を表示(RGB)</h2>
     <div class="d-flex bd-highlight mb-3 mt-5 justify-content-center">
       <canvas id="canvasGLRGB" width="352" height="288">
                 CIFサイズのYUV画像を表示します。
@@ -50,7 +50,7 @@
 
     <hr>
 
-    <h2>&ltcanvas&gtにWebGLでYUVを直接GPUにセットして画像を表示(YUV)</h2>
+    <h2 id="webgl-yuv">&ltcanvas&gtにWebGLでYUVを直接GPUにセットして画像を表示(YUV)</h2>
     <div class="d-flex bd-highlight mb-3 mt-5 justify-content-center">
       <canvas id="canvasGLYUV" width="352" height="288">
                     CIFサイズのYUV画像を表示します。
@@ -64,6 +64,10 @@
 
     <!-- ファイルオープンダイアログのためのボタン(見えない) -->
     <input type="file" name="file-open" id="fileOpenDialogGLYUV" accept=".yuv" hidden>
+
+    <hr>
+
+    <p>CIFサイズのYUV画像ファイル、例えば"akiyo_cif.yuv"等については、<a href="http://trace.eas.asu.edu/yuv/" target="_blank" rel="noopener">アリゾナ州立大学のライブラリ</a>や<a href="https://media.xiph.org/video/derf/" target="_blank" rel="noopener">Xiph.org</a>のホームページ等からダウンロードして下さい。</p>
 
   </main>
 
